@@ -38,6 +38,7 @@ class NgundanginController extends Controller
     
     public function ngundangin2($link, $tamu){
         $id = DB::table('user')->where('link', $link)->first();
+        $tamu = str_replace('_', ' ', $tamu);
         if(!isset($id)){
             return view('404');
         } else {

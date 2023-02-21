@@ -21,7 +21,7 @@
           <div class="card-body">
             <h1 class="card-value">Hore undangan kamu udah jadi!</h1>
             <h5 class="project-title">Cara share undangannya :</h5>
-            <p class="tx-15 tx-gray-700">Share aja link kamu "<a href="{{url('/'.Session::get('link'))}}" target="_blank">https://ngundangin.online/{{Session::get('link')}}</a>" tapi kalimat awalnya cuma buka undangan, kalo mau ada nama tamunya kamu bisa share linknya disertai nama tamunya, contohnya kaya gini "<a href="{{url('/'.Session::get('link').'/Andre')}}" target="_blank">https://ngundangin.online/{{Session::get('link')}}/Andre</a>" nah kalo kaya gitu nanti awalnya bakal ada kalimat "Untuk Andre dan partner" gituuuu, cobain deh.</p>
+            <p class="tx-15 tx-gray-700">Share aja link kamu "<a href="{{url('/'.Session::get('link'))}}" target="_blank">https://ngundangin.online/{{Session::get('link')}}</a>" tapi kalimat awalnya cuma buka undangan, kalo mau ada nama tamunya kamu bisa share linknya disertai nama tamunya (ingat, spasi ganti dengan garis bawah ya), contohnya kaya gini "<a href="{{url('/'.Session::get('link').'/Fredrin_Sambo')}}" target="_blank">https://ngundangin.online/{{Session::get('link')}}/Fredrin_Sambo</a>" nah kalo kaya gitu nanti awalnya bakal ada kalimat "Untuk Andre dan partner" gituuuu, cobain deh.</p>
             <h5 class="project-title">Cara edit undangan :</h5>
             <p class="tx-15 tx-gray-700">Buka menu sebelah kiri, lalu klik "Detail Undangan", tinggal pilih deh mau edit bagian apa, gampang ko :D.</p>
             <h5 class="project-title">Kalo mau lihat pesan tamu undangan :</h5>

@@ -27,6 +27,11 @@
 <div class="start" id="start">
 	<div class="amplop">
 		<p class="atas" data-aos="fade-down">{{$res->namaPria}} <i class="icon icon-heart"></i> {{$res->namaWanita}}</p>
+		<?php if ($tamu == null) {
+			?> <p class="bawah" data-aos="fade-down">Klik amplop<br>untuk buka undangan</p> <?php
+		} else {
+			?> <p class="bawah" data-aos="fade-down">Untuk {{$tamu}} dan partner.</p>
+		<?php } ?>
 			<div class="valentines" data-aos="zoom-in" onclick="bukaundangan()">
 				<div class="envelope">
 					<div class="kartu">
@@ -38,11 +43,6 @@
 				</div>
 				<div class="front"></div>
 			</div>
-			<?php if ($tamu == null) {
-				?> <p class="bawah">Klik amplop<br>untuk buka undangan</p> <?php
-			} else {
-				?> <p class="bawah">Untuk {{$tamu}} dan partner.</p>
-			<?php } ?>
 	</div>
 </div>
 
@@ -426,7 +426,7 @@
 			
 			<ul><p>Made with love <i class="icon-heart" aria-hidden="true"></i><br>Yuk lihat selengkapnya untuk buat undangan digital GRATIS juga, klik link dibawah ya.</p></ul>
 			<ul class="footer-links">
-				<li><a href="aboutApps.php"><u>BUAT UNDANGAN JUGA</u></a></li>
+				<li><a href="{{url('/')}}"><u>BUAT UNDANGAN JUGA</u></a></li>
 			</ul>
 			<ul class="social-icons">
 				<li><a href="" target="_blank"><i class="icon icon-instagram"></i> NARATIVE.ID</a></li>
