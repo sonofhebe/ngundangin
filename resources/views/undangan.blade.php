@@ -244,7 +244,7 @@
 						{{-- end Modal --}}
 
 					@endforeach
-						<!-- end = konten bagain cerita -->
+						<!-- end = konten cerita -->
 						
 					</div>
 					
