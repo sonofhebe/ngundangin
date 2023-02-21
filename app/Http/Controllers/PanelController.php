@@ -49,8 +49,10 @@ class PanelController extends Controller
             $file = $request->file('fileGambar');
             $fileName = $file->getClientOriginalName();
             $request->fileGambar->move(public_path('Admin/fileUpload'), $fileName);
-            //delete old image
-	        unlink(public_path('Admin/fileUpload/'.$request->gambarold));
+            if ($request->gambarold = 'slider-1-1600x900.jpg'){
+                //delete old image
+    	        unlink(public_path('Admin/fileUpload/'.$request->gambarold));
+            }
             //update post with new image
             $resepsi->update([
                 'namaPria' => $request->namaPria,
@@ -137,7 +139,7 @@ class PanelController extends Controller
         $count = DB::table('cerita')->where('iduser', $request->session()->get('id'))->count();
         if ($count < 4) {
             $request->validate([
-                'gambarCerita' => 'mimes:jpeg,jpg,png,gif|max:2048'
+                'gambarCerita' => 'mimes:jpeg,jpg,png,gif|max:10048'
             ]);
             //simpan gambar
             $file = $request->file('gambarCerita');
@@ -159,7 +161,7 @@ class PanelController extends Controller
     public function ceritaedit(Request $request, $id){
         $cerita = Cerita::where('idCerita', $id)->first();
         $request->validate([
-            'gambarCerita' => 'mimes:jpeg,jpg,png,gif|max:2048'
+            'gambarCerita' => 'mimes:jpeg,jpg,png,gif|max:10048'
         ]);
         //Cek Gambar diganti atau tidak
         if ($request->hasFile('gambarCerita')) {
@@ -212,7 +214,7 @@ class PanelController extends Controller
         $count = DB::table('galery')->where('iduser', $request->session()->get('id'))->count();
         if ($count < 9) {
             $request->validate([
-                'namaFile' => 'mimes:jpeg,jpg,png,gif|max:2048'
+                'namaFile' => 'mimes:jpeg,jpg,png,gif|max:10048'
             ]);
             //simpan gambar
             $file = $request->file('namaFile');
@@ -273,7 +275,7 @@ class PanelController extends Controller
     }
     public function laguin(Request $request){
         $request->validate([
-            'lagu' => 'mimes:mp3,ogg'
+            'lagu' => 'mimes:mp3,ogg|max:10048'
         ]);
         $sambutan = Lagu::where('iduser', $request->session()->get('id'))->first();
         //simpan lagu baru

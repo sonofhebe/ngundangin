@@ -23,7 +23,7 @@
         position: relative;
         cursor: pointer;
         animation: up 3s linear infinite;
-        margin-top: -400px;
+        margin-top: -340px;
     }
 }
 
@@ -174,7 +174,7 @@
 @media only screen and (max-width: 992px) {
     .atas{
         font-family: 'Playball', cursive;
-        font-size: 58px;
+        font-size: 40px;
         text-align: center;
         color: #003049;
         margin-top: -100px;
@@ -183,7 +183,7 @@
     .bawah{
         font-family: 'Bitter', serif;
         font-size: 24px;
-        margin-top: -500px;
+        margin-top: -470px;
         text-align: center;
         color: #003049;
     }
