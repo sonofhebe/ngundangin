@@ -46,7 +46,7 @@ class UserController extends Controller
             'jamResepsi' => date("h:i:s"),
             'alamatResepsi' => 'Jakarta',
             'namaGedung' => 'Rumah Saudari Fulannah / Gedung Pernikahan ABC',
-            'fileGambar' => 'slider-1-1600x900.jpg',
+            'fileGambar' => 'Foto pegangan.jpg',
             'maps' => 'https://www.google.com/maps?q=-6.175307,106.827131&hl=es;z=14&output=embed',
         ]);
         $Resepsi->save();
@@ -67,7 +67,7 @@ class UserController extends Controller
 
         $Lagu = new Lagu([
             'iduser' => $request->session()->get('iduser'),
-            'namaFile' => 'ARVIAN DWI - MELEPAS LAJANG.mp3',
+            'namaFile' => 'perfect - saxophone.mp3',
         ]);
         $Lagu->save();
        

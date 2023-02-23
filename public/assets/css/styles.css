@@ -956,18 +956,37 @@ table.dataTable thead .sorting_desc_disabled:before {
 .btnmusic {
 	position: fixed;
 	z-index:1000;
-	border: 2px solid #E45F74;
-	border-radius: 15px;
-	padding: 10px 16px;
+	padding: 10px;
+	border-radius: 50%;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
 	bottom: 5%;
 	right: 10%;
-	background-color: #e7e7e7;
-	color: black;
+	background-color: #E45F74;
+	transition: 0.3s ease-in-out;
+}
+.playpause {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
+.playpause:hover {
+  background: #db6b7c;
+}
+
+.playpause .button {
+  width: 35px;
+  height: 35px;
+  background: #f0f0f0;
+  transition: inherit;
+  clip-path: polygon(0 0, 40% 0, 40% 100%, 60% 100%, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.playpause.playing .button {
+	clip-path: polygon(0 0, 50% 25%, 50% 75%, 50% 75%, 50% 25%, 100% 50%, 100% 50%, 0 100%);
+}

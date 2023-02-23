@@ -47,9 +47,9 @@ class PanelController extends Controller
         if ($request->hasFile('fileGambar')) {
             //Simpan Gambar
             $file = $request->file('fileGambar');
-            $fileName = $file->getClientOriginalName();
+            $fileName = date('H-i-s').'_'.$file->getClientOriginalName();
             $request->fileGambar->move(public_path('Admin/fileUpload'), $fileName);
-            if ($request->gambarold = 'slider-1-1600x900.jpg'){
+            if ($request->gambarold != 'Foto pegangan.jpg'){
                 //delete old image
     	        unlink(public_path('Admin/fileUpload/'.$request->gambarold));
             }
@@ -278,6 +278,9 @@ class PanelController extends Controller
             'lagu' => 'mimes:mp3,ogg|max:10048'
         ]);
         $sambutan = Lagu::where('iduser', $request->session()->get('id'))->first();
+        if ($request->laguold != 'perfect - saxophone.mp3'){
+            unlink(public_path('Admin/assets/lagu/'.$request->laguold));
+        }
         //simpan lagu baru
         $file = $request->file('lagu');
         $fileName = date('H-i-s').'_'.$file->getClientOriginalName();

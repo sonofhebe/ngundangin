@@ -10,15 +10,25 @@
     margin-right: auto;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 750px) {
     .valentines{
         position: relative;
         cursor: pointer;
         animation: up 3s linear infinite;
+        margin-top: -320px;
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 750px) and (max-width: 1450px) {
+    .valentines{
+        position: relative;
+        cursor: pointer;
+        animation: up 3s linear infinite;
+        margin-top: -170px;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
     .valentines{
         position: relative;
         cursor: pointer;
@@ -153,25 +163,9 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .atas{
-        font-family: 'Playball', cursive;
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 150px;
-        color: #003049;
-    }
 
-    .bawah{
-        font-family: 'Bitter', serif;
-        font-size: 18px;
-        text-align: center;
-        margin-top: -340px;
-        color: #003049;
-    }
-}
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 750px) {
     .atas{
         font-family: 'Playball', cursive;
         font-size: 40px;
@@ -182,11 +176,45 @@
 
     .bawah{
         font-family: 'Bitter', serif;
-        font-size: 24px;
+        font-size: 20px;
         margin-top: -470px;
         text-align: center;
         color: #003049;
     }
 }
 
+@media only screen and (min-width: 750px) and (max-width: 1450px) {
+    .atas{
+        font-family: 'Playball', cursive;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 310px;
+        color: #003049;
+    }
 
+    .bawah{
+        font-family: 'Bitter', serif;
+        font-size: 20px;
+        text-align: center;
+        margin-top: -670px;
+        color: #003049;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .atas{
+        font-family: 'Playball', cursive;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 0px;
+        color: #003049;
+    }
+
+    .bawah{
+        font-family: 'Bitter', serif;
+        font-size: 24px;
+        text-align: center;
+        margin-top: -440px;
+        color: #003049;
+    }
+}

@@ -292,7 +292,7 @@
 						
 						<!-- start = untuk menampilkan foto -->
 						<!-- nanti setting ukuran 600x400 -->
-						<div class="row">
+						<div class="row" style="display: flex; justify-content: center;">
 							
 						@foreach ($galery as $gal)
 						<a href="" data-toggle="modal" data-target="#modalgambar{{$gal->idGalery}}">
@@ -384,7 +384,7 @@
 				</div>
 				<!-- end = untuk table -->
 
-				<div class="col-sm-4" data-aos="fade-left">
+				<div class="col-sm-4" style="display: flex; justify-content: center;" data-aos="fade-left">
 					<div class="contact-form margin-bottom">
 						<h2 class="center-text">Kirim Pesan</h2>
 							<div class="row">
@@ -434,8 +434,12 @@
 			<p class="copyright"> Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 			 -  Powered By <a href="https://narative.cf/" target="_blank"><u>Narative</u></a>.</p>
 		</div>
-	
-<button class="btnmusic" onClick="togglePlay()" style=""><b>Paus/Play Music</b></button>
+
+<button class="btnmusic" onClick="togglePlay()" style="">
+	<div class="playpause">
+		<div class="button"></div>
+	</div>
+</button>
 <audio id="lagu" loop>
   	<source src="{{url('Admin/assets/lagu/'.$lagu->namaFile)}}" type="audio/mp3">
 </audio>
@@ -482,6 +486,13 @@
 			target.addEventListener('transitionend', () => target.remove());
 			togglePlay();
 			}
+
+			//Button play pause
+			const playpause = document.querySelector('.playpause');
+
+playpause.addEventListener('click', () => {
+  playpause.classList.toggle('playing');
+});
 
     </script>
 	

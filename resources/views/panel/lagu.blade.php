@@ -38,7 +38,7 @@
                                 </audio><br><br>
                                 <label>Ganti Lagu (MP3/OGG file only) : </label><br>
                                 <input type="file" name="lagu" class=" wd-250 mb-2"><br>
-                                <input type="hidden" name="gambarold" value="{{$lagu->namaFile}}">
+                                <input type="hidden" name="laguold" value="{{$lagu->namaFile}}">
                                 @if ($errors->has('lagu'))
                                     <span class="text-danger text-left">{{ $errors->first('lagu') }}</span>
                                 @endif
