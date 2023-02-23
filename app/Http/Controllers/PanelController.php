@@ -297,7 +297,7 @@ class PanelController extends Controller
      *
      */
     public function akun(Request $request){
-        $akun = DB::table('User')->where('iduser', $request->session()->get('id'))->first();
+        $akun = DB::table('user')->where('iduser', $request->session()->get('id'))->first();
         return view('panel.akun', [
             'user' => $akun,
         ]);
